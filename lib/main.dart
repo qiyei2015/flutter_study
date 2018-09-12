@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/forJava.dart';
+import 'package:flutter_study/test/DemoState.dart';
 
-void main() => runApp(new MyApp());
+void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+//      home: new MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  DemoStateWidget("这是一个有状态的Widget"),
     );
   }
 }
