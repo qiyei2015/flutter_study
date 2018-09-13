@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 //      home: new MyHomePage(title: 'Flutter Demo Home Page'),
-      home:  DemoStateWidget("这是一个有状态的Widget"),
+      home:  ContainerWidget(),
     );
   }
 }

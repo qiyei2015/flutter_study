@@ -23,6 +23,50 @@ class DemoWidget extends StatelessWidget{
 }
 
 
+class ContainerWidget extends StatelessWidget{
+
+  final String text;
+
+  ContainerWidget({this.text});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.all(10.0),
+      height: 120.0,
+      width: 500.0,
+      decoration: BoxDecoration(
+        //弧度
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        //颜色
+        color: Colors.grey,
+        //边框
+        border: Border.all(color: Colors.green,width: 1.0)
+      ),
+//      color: Colors.green,
+//      child: Text(text ?? "无状态的Widget",style: TextStyle(color: Colors.black,fontSize: 18.0),),
+      //列
+      child: Column(
+        //主轴起始位置 column是竖直
+        mainAxisAlignment: MainAxisAlignment.center,
+        //大小
+        mainAxisSize: MainAxisSize.min,
+        //侧轴 横向
+        crossAxisAlignment: CrossAxisAlignment.start,
+        //内容
+        children: <Widget>[
+          //flex表示比例,默认为1
+          Expanded(child: Text("111"),flex: 2,),
+          Expanded(child: Text("222"),)
+
+        ],
+      ),
+    );
+  }
+
+}
+
+
 /**
  * 有状态的布局,继承StatefulWidget，创建一个
  */
