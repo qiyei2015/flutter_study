@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_study/forJava.dart';
+import 'package:flutter_study/test/DemoPage.dart';
 import 'package:flutter_study/test/DemoState.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(DemoApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
 //      home: new MyHomePage(title: 'Flutter Demo Home Page'),
-      home:  ContainerWidget(),
+      home: CardWidget(),
     );
   }
 }
@@ -39,8 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-
-    var bike = Bicycle(20,8);
+    var bike = Bicycle(20, 8);
 
     return new Scaffold(
       appBar: new AppBar(
